@@ -1,6 +1,6 @@
 
 body {
-    background-color: #bfdbfe;
+    background-color: #9ca3af;
     margin: 0%;
     padding: 0%;
 }
@@ -10,6 +10,7 @@ body {
     min-width: 100vw;
 
     display: grid;
+    row-gap: 5px;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 2fr 6fr 1fr;
 }
@@ -32,7 +33,7 @@ body {
 }
 
 #side-bar {
-    background-color: #14532d;
+    background-color: #0e7490;
 
     grid-row: 2 / 3;
     grid-column: 1 / 2;
@@ -40,7 +41,7 @@ body {
 
 #tasks-container {
     display: grid;
-
+    background-color: #bfdbfe;
 
     grid-row: 2 / 3;
     grid-column: 2 / 3;
