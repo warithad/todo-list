@@ -1,4 +1,5 @@
 import Task from './task'
+import {compareAsc, format} from 'date-fns'
 
 export default class Project{
     constructor(name){
@@ -9,7 +10,7 @@ export default class Project{
     setName(name){
         this.name = name;
     }
-    
+
     getName(){
         return this.name;
     }
