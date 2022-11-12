@@ -70,10 +70,9 @@ body {
 }
 
 #github-logo:hover{
-     width: 2.5em;
-     height: 2.5em;
-     transform: rotate(360deg);
-     transition-duration: .5s;
+    scale: 1.2;
+    transform: rotate(360deg);
+    transition-duration: .5s;
 }
 
 @font-face {
