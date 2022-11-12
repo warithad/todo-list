@@ -15,6 +15,7 @@ body {
     grid-template-rows: 2fr 6fr 1fr;
 }
 
+/*header*/
 #header {
     background-color: #1f2937;
     color: #f8fafc;
@@ -32,13 +33,67 @@ body {
     margin-bottom: 1rem;
 }
 
+/*side-bar*/
 #side-bar {
+    padding-top: 1.7rem;
     background-color: #0e7490;
+    color: white;
 
     grid-row: 2 / 3;
     grid-column: 1 / 2;
+
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    
 }
 
+.default-projects{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+/*Project buttons*/
+.button-project{
+    background-color: inherit;
+    color: white;
+    border: none;
+    font-size: 1.3rem;
+    font-family: nunito-regular;
+    font-weight: 5px;
+    
+
+    display: flex;
+    align-items: center;   
+    padding-left: 1.5rem;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    gap: 1rem;
+
+    transition: 300ms;
+}
+
+.button-project:hover{
+    background-color: #18181b;
+    opacity: .5;
+    transform: translateX(1rem);
+}
+
+.project-icon{
+    width: 2rem;
+    height: 2rem;
+}
+
+/**/
+#project-header-text
+{
+    font-size: 2.5rem;
+    padding-left: 1.5rem;
+    font-family: nunito-regular;
+}
+
+/*main*/
 #tasks-container {
     display: grid;
     background-color: #bfdbfe;
@@ -51,6 +106,7 @@ body {
 
 } */
 
+/*footer*/
 #footer {
     background-color: #1f2937;
     color: #f8fafc;
