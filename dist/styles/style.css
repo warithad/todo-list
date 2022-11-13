@@ -48,6 +48,10 @@ body {
     overflow-y: scroll;
 }
 
+#side-bar::-webkit-scrollbar{
+    display: none;
+}
+
 .default-projects{
     display: flex;
     flex-direction: column;
