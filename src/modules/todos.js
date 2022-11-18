@@ -17,10 +17,14 @@ export default class Todos {
 
     addProject(project){
         if(!this.containsProject(project.getName())){
-            this.projects.add(project);
+            this.projects.push(project);
             return;
         }
         alert('This project already exists');
+    }
+
+    deleteProject(projectName){
+        this.projects.filter(project => project.getName() !== projectName);
     }
 
     getProject(projectName){
