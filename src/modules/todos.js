@@ -35,6 +35,10 @@ export default class Todos {
         return this.projects;
     }
 
+    setProjects(projects){
+        this.projects = projects;
+    }
+
     getAllTasks(){
         const tasks =[];
         this.projects.forEach(project =>{

@@ -23,6 +23,10 @@ export default class Project{
         return this.tasks;
     }
 
+    setTasks(tasks){
+        this.tasks = tasks;
+    }
+
     addTask(task){
         this.tasks.push(task);
     }
