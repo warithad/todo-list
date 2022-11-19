@@ -2,11 +2,8 @@ import Todos from './todos'
 import Task from './task'
 import Project from './project'
 
-import UI from './ui'
 
-
-
-export default class Storage{
+export default class Storage {
     static saveTodos(data){
         localStorage.setItem('todos', JSON.stringify(data))
     }
@@ -52,6 +49,12 @@ export default class Storage{
     static deleteTask(projectName, taskTitle){
         const todos = Storage.getTodos();
         todos.deleteTask(projectName, taskTitle);
+        Storage.saveTodos(todos);
+    }
+
+    static deleteTaskByTaskTitle(taskTitle){
+        const todos = Storage.getTodos();
+        todos.deleteTaskByTaskTitle(taskTitle);
         Storage.saveTodos(todos);
     }
 

@@ -45,7 +45,7 @@ export default class Project{
     }
 
     deleteTask(taskTitle){
-        this.tasks
+       this.tasks = this.tasks
         .filter(task => task.getTitle() !== taskTitle);
     }
     
