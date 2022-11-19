@@ -38,8 +38,9 @@ export default class UI{
         this.todos.addProject(new Project(name));
 
         const createdProjects = document.getElementById('created-projects');
-        const button = this.createProjectButton(name);
+        const button = createProjectButton(name);
 
+        console.log('logging button');
         console.log(button);
         createdProjects.appendChild(button);
     }
@@ -52,9 +53,9 @@ export default class UI{
 
         const projectIcon = document.createElement('img');
         projectIcon.classList.add('project-icon');
-        projectIcon.src = './icons/list-box.png';
+        projectIcon.src = `./assets/icons/list-box.png`;
 
-        const cancelButton = this.createCancelButton();
+        const cancelButton = createCancelButton();
         
         button.appendChild(projectIcon);
         button.textContent = name;
@@ -71,7 +72,7 @@ export default class UI{
     createCancelButton(){
         const cancelIcon = document.createElement('img');
         cancelIcon.classList.add('cancel-icon');
-        cancelIcon.src = '../../dist/assets/icons/close-circle-outline.png';
+        cancelIcon.src = `./assets/icons/close-circle-outline.png`;
 
         const cancelButton = document.createElement('button');
         cancelButton.classList.add('project-cancel-button');

@@ -7,6 +7,9 @@ import UI from './ui'
 
 
 export default class Storage{
+    static saveTodos(data){
+        localStorage.setItem('todos', JSON.stringify(data))
+    }
 
     static getTodos(){
         const todos = Object.assign(
@@ -26,5 +29,27 @@ export default class Storage{
 
         return todos;
     }
+
+    static addProject(project){
+        const todos = Storage.getTodos();
+
+        todos.addProject(project);
+        Storage.saveTodos(todos);
+    }
     
+    static deleteProject(projectName){
+        const todos = Storage.getTodos();
+        todos.deleteProject(projectName);
+        Storage.saveTodos(todos);
+    }
+
+    static addTask(projectName, taskTitle){
+        const todos = Storage.getTodos();
+        todos.addTask(projectName, taskTitle);
+        Storage.saveTodos(todos);
+    }
+
+    static deleteTask(projectName, taskTitle){
+        
+    }
 }

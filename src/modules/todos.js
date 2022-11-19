@@ -1,5 +1,5 @@
 import Project from './project';
-import {compareAsc, format} from 'date-fns'
+import {compareAsc, format, isThisQuarter, isThisSecond} from 'date-fns'
 
 export default class Todos {
     constructor(){
@@ -37,6 +37,14 @@ export default class Todos {
 
     setProjects(projects){
         this.projects = projects;
+    }
+
+    addTask(projectName, taskTitle){
+        this.projects.find(project => project.getName() === projectName).addTask(taskTitle);
+    }
+
+    deleteTask(projectName, taskTitle){
+        this.projects.find(project => project.getName() == projectName).deleteTask(taskTitle);
     }
 
     getAllTasks(){
