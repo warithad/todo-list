@@ -1,6 +1,6 @@
-import UI from './modules/ui.js'
+import Ui from './modules/ui.js'
+import LoadPage from './modules/load'
 
-const ui = new UI();
+LoadPage.loader();
 
-ui.activateDefaultProjectButtons();
-// ui.addProject('warith');
+

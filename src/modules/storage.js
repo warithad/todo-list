@@ -50,6 +50,14 @@ export default class Storage{
     }
 
     static deleteTask(projectName, taskTitle){
-        
+        const todos = Storage.getTodos();
+        todos.deleteTask(projectName, taskTitle);
+        Storage.saveTodos(todos);
+    }
+
+    static setTaskDueDate(projectName, taskTitle, dueDate){
+        const todos = Storage.getTodos();
+        todos.setTaskDueDate(projectName, taskTitle, dueDate);
+        Storage.saveTodos(todos);
     }
 }

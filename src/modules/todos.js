@@ -44,7 +44,11 @@ export default class Todos {
     }
 
     deleteTask(projectName, taskTitle){
-        this.projects.find(project => project.getName() == projectName).deleteTask(taskTitle);
+        this.projects.find(project => project.getName() === projectName).deleteTask(taskTitle);
+    }
+
+    setTaskDueDate(projectName, taskTitle, dueDate){
+        this.projects.find(project => project.getName() === projectName).setTaskDueDate(taskTitle, dueDate);
     }
 
     getAllTasks(){

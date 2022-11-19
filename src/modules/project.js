@@ -30,6 +30,10 @@ export default class Project{
     addTask(task){
         this.tasks.push(task);
     }
+    
+    setTaskDueDate(taskTitle, dueDate){
+        this.tasks.find(task => task.getTitle() === taskTitle).setDueDate(dueDate);
+    }
 
     deleteTask(taskTitle){
         this.tasks
