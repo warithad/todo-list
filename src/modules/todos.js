@@ -43,6 +43,10 @@ export default class Todos {
         this.projects.find(project => project.getName() === projectName).addTask(taskTitle);
     }
 
+    deleteTaskByTaskTitle(taskTitle){
+        this.projects.forEach(project => project.deleteTask(taskTitle));
+    }
+
     deleteTask(projectName, taskTitle){
         this.projects.find(project => project.getName() === projectName).deleteTask(taskTitle);
     }
@@ -54,7 +58,7 @@ export default class Todos {
     getAllTasks(){
         const tasks =[];
         this.projects.forEach(project =>{
-            project.forEach(task => tasks.push(task));
+            project.getTasks().forEach(task => tasks.push(task));
         })
         return tasks;
     }

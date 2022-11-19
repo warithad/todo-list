@@ -1,17 +1,12 @@
 
 export default class Task {
-    constructor(title, description, dueDate = 'none'){
+    constructor(title, dueDate = 'none'){
         this.title = title;
-        this.description = description;
         this.dueDate = dueDate;
     }
 
     getTitle(){
         return this.title;
-    }
-
-    getDescription(){
-        return this.description;
     }
 
     getDueDate(){
@@ -21,11 +16,7 @@ export default class Task {
     setTitle(title){
         this.title = title;
     }
-
-    setDescription(description){
-        this.description = description;
-    }
-
+    
     setDueDate(dueDate){
         this.dueDate = dueDate;
     }

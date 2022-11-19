@@ -19,6 +19,15 @@ export default class Project{
         return this.tasks.find(task => task.getTitle() === taskTitle);    
     }
 
+    // containsTask(taskTitle){
+    //     this.tasks.forEach(task => ()=>{
+    //         if(task.getTitle() === taskTitle){
+    //             return true;
+    //         }
+    //     })
+    //     return false;
+    // }
+
     getTasks(){
         return this.tasks;
     }
