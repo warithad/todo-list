@@ -154,11 +154,6 @@ body {
     grid-column: 1 / 2;
 }
 
-#button-cancel-project{
-    grid-row: 3 /4;
-    grid-column: 2 / 3;
-}
-
 #add-project-div>button{
     margin-top: 5px;
     transition: 400ms;
