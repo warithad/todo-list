@@ -37,7 +37,7 @@ export default class Project{
     }
 
     addTask(task){
-        this.tasks.push(task);
+        this.tasks.push(new Task(task));
     }
     
     setTaskDueDate(taskTitle, dueDate){
