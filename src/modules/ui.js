@@ -14,6 +14,9 @@ export default class UI{
     static activateDefaultButtons(){
         const getAllTasksButton = document.getElementById('button-all-tasks'); 
         getAllTasksButton.addEventListener('click', ()=>{
+            // const p = new Project('proj');
+            // Storage.addProject(p);
+            // Storage.addTask('proj', 'Taker');
             UI.appendAllTasks();
         })
 
@@ -67,7 +70,7 @@ export default class UI{
         h3TaskDueDate.textContent = dueDate;
 
         const cancelButton = UI.createTaskCancelButton();
-        taskCard.append(h2Tasktitle, dueDate, cancelButton);
+        taskCard.append(h2Tasktitle, h3TaskDueDate, cancelButton);
         
         cancelButton.addEventListener('click', ()=>{
             Storage.deleteTaskByTaskTitle(title);

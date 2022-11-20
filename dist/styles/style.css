@@ -48,6 +48,10 @@ body {
     overflow-y: scroll;
 }
 
+#side-bar::-webkit-scrollbar{
+    display: none;
+}
+
 .default-projects{
     display: flex;
     flex-direction: column;
@@ -116,14 +120,45 @@ body {
     display: grid;
     background-color: #bfdbfe;
 
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 10px;
     grid-row: 2 / 3;
     grid-column: 2 / 3;
 }
 
-/* .task {
+/* task*/
+.task {
+    background-color: #f8fafc;
+    color: #18181b;
+    font-family: nunito-regular;
+    display: flex;
+    height: 100px;
+    justify-content: space-between;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    align-items: center;
+}
 
-} */
+.task-title{
+    font-size: 1.5rem;
+}
 
+.task-date{
+    font-size: 1rem;
+
+}
+
+.task-cancel-button {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: inherit;
+    border-style: none;
+}
+
+.task-cancel-icon{
+    width: 1.5rem;
+    height: 1.5rem;
+}
 /*footer*/
 #footer {
     background-color: #1f2937;
