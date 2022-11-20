@@ -104,7 +104,9 @@ export default class UI{
         return cancelButton;
     }
 
-    //helper method
+    // static createProjectButton(projectName){
+    //     const projectButton = document.createElement('button');
+    // }
     
 
 }
