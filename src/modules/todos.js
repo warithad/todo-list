@@ -18,13 +18,16 @@ export default class Todos {
     addProject(project){
         if(!this.containsProject(project.getName())){
             this.projects.push(project);
-            return;
+            return true;
         }
-        alert('This project already exists');
+        else {
+            alert('This project already exists');
+            return false;
+        }
     }
 
     deleteProject(projectName){
-        this.projects.filter(project => project.getName() !== projectName);
+        this.projects = this.projects.filter(project => project.getName() !== projectName);
     }
 
     getProject(projectName){
@@ -64,7 +67,7 @@ export default class Todos {
     }
 
     getTasksToday(){
-        
+             
     }
 
     getTasksThisWeek(){
@@ -74,4 +77,5 @@ export default class Todos {
     getProjectTasks(projectName){
         return this.getProject(projectName).getTasks();
     }
+
 }

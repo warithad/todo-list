@@ -30,8 +30,9 @@ export default class Storage {
     static addProject(project){
         const todos = Storage.getTodos();
 
-        todos.addProject(project);
+        const value = todos.addProject(project);
         Storage.saveTodos(todos);
+        return value;
     }
     
     static deleteProject(projectName){

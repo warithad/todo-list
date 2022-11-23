@@ -34,13 +34,13 @@
 
             <div class="created-projects" id="created-projects">
                 <h2 id="project-header-text">Projects</h2>
-
-                <form id="add-project-div">
-                    <h2 id="add-project-title">Add Project</h2>
-                    <input type="text" id="input-add-project" required>
-                    <button id="button-submit-project">Submit</button>
-                </form>
+                <div id="projects-list"></div>
             </div>
+            <form id="add-project-form">
+                <label for="input-add-project" id="add-project-title">Add Project</label>
+                <input type="text" id="input-add-project" required>
+                <button type="submit" id="button-submit-project">Submit</button>
+            </form>
         </div>
         
         <div id="tasks-container"></div>
